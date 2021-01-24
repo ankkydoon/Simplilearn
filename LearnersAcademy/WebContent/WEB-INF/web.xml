@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>LearnersAcademy</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <error-page>
+  <exception-type>java.lang.Throwable</exception-type>
+  <location>/Controller/ErrorHandler</location>
+</error-page>
+  
+  <servlet>
+    <servlet-name>studentServlet</servlet-name>
+    <servlet-class>Controller.studentServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>classesServlet</servlet-name>
+    <servlet-class>Controller.classesServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>subjectsServlet</servlet-name>
+    <servlet-class>Controller.subjectsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>teacherServlet</servlet-name>
+    <servlet-class>Controller.teacherServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CSTServlet</servlet-name>
+    <servlet-class>Controller.CSTServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>studentServlet</servlet-name>
+    <url-pattern>/students</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>classesServlet</servlet-name>
+    <url-pattern>/classes</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>subjectsServlet</servlet-name>
+    <url-pattern>/subjects</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>teacherServlet</servlet-name>
+    <url-pattern>/teachers</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CSTServlet</servlet-name>
+    <url-pattern>/classsubjectteacher</url-pattern>
+  </servlet-mapping>
+</web-app>
